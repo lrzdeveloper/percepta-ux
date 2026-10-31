@@ -1,0 +1,32 @@
+{
+  "name": "@lrzdeveloper/percepta-ux",
+  "version": "0.2.0",
+  "private": true,
+  "description": "UX psychology for interface design, implementation, and review in coding agents.",
+  "type": "module",
+  "bin": {
+    "percepta-ux": "bin/cli.mjs"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "docs/assets/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "author": "lrzdeveloper",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrzdeveloper/percepta-ux.git"
+  },
+  "scripts": {
+    "test": "node --test",
+    "doctor": "node bin/cli.mjs doctor",
+    "check:repo": "python3 scripts/check_repository.py",
+    "setup:hooks": "git config --local core.hooksPath .githooks"
+  }
+}

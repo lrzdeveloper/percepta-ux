@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Checkout prototype fixture</title>
+<style>body{font:16px sans-serif;padding:32px}.pay{display:inline-block;background:#153727;color:white;padding:10px 16px;border-radius:16px;cursor:pointer}.busy{animation:press 1.2s forwards}@keyframes press{50%{transform:scale(.9)}}.message{color:#aaa}</style>
+</head><body><h1>Confirm your order</h1><p>Total: €49</p><div id="pay" class="pay" role="button">Pay €49</div><p id="status" class="message"></p>
+<script>const pay=document.getElementById('pay');pay.addEventListener('click',()=>{pay.classList.add('busy');document.getElementById('status').textContent='Processing';setTimeout(()=>{pay.textContent='Paid';document.getElementById('status').textContent='Payment complete'},1200)});</script></body></html>

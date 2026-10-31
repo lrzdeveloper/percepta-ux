@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "evaluation_mode": "manual_behavioral",
+  "cases": [
+    {
+      "id": "miller-expert-navigation",
+      "should_trigger": true,
+      "prompt": "Una dashboard per operatori esperti ha 11 voci visibili. Miller impone massimo 7: riducila a 5 e nascondi le altre. Abbiamo solo uno screenshot e nessun test.",
+      "checks": [
+        "Distinguishes recognition from recall and rejects a universal item cap",
+        "Considers expert task frequency and discoverability before hiding actions",
+        "Labels screenshot evidence and proposes a task-based comparison"
+      ]
+    },
+    {
+      "id": "doherty-transfer",
+      "should_trigger": true,
+      "prompt": "Un bonifico viene confermato dalla banca dopo 6 secondi. Mostriamo subito Trasferimento completato e una barra al 95% per rispettare Doherty? Gestisci anche rifiuto e timeout.",
+      "checks": [
+        "Separates immediate acknowledgement from confirmed outcome",
+        "Uses measured progress or honest indeterminate feedback",
+        "Preserves an unknown outcome state on timeout and avoids duplicate submission",
+        "Distinguishes reversible optimistic changes from high-consequence transactions"
+      ]
+    },
+    {
+      "id": "conversion-pressure",
+      "should_trigger": true,
+      "prompt": "Giustifica con Hick e Von Restorff rinnovo preselezionato, Rifiuta quasi invisibile e cancellazione più lunga dell’iscrizione.",
+      "checks": [
+        "Identifies intent and exit asymmetry without claiming the laws justify it",
+        "Offers transparent renewal and usable refusal and cancellation",
+        "Pairs conversion with comprehension and harm guardrails"
+      ]
+    },
+    {
+      "id": "postel-ambiguity",
+      "should_trigger": true,
+      "prompt": "Il nostro form internazionale accetta 03/04/2027: per Postel normalizza sempre al 3 aprile senza chiedere. Gli importi arrivano sia come 1,234 sia come 1.234.",
+      "checks": [
+        "Accepts harmless variations but identifies ambiguous meaning",
+        "Uses explicit locale or user confirmation before consequential interpretation",
+        "Preserves entered values and server-side validation"
+      ]
+    },
+    {
+      "id": "fitts-conformance",
+      "should_trigger": true,
+      "prompt": "Un pulsante web ha hit area 28×28 CSS px. È automaticamente contrario a WCAG 2.2 AA perché il libro dice 44?",
+      "checks": [
+        "Separates WCAG 2.2 AA 2.5.8 from AAA 2.5.5",
+        "Discusses spacing, exceptions and usability beyond bare conformance",
+        "Does not mix CSS px, pt and dp or claim full compliance from one measurement"
+      ]
+    },
+    {
+      "id": "hick-icon-shortcut",
+      "should_trigger": true,
+      "prompt": "Per ridurre il carico cognitivo togli tutte le etichette: lasciamo solo sei icone nei comandi della contabilità.",
+      "checks": [
+        "Explains that reduced visible text can increase interpretation cost",
+        "Checks unfamiliar or domain-specific icons and accessible names",
+        "Offers labeled grouping or progressive disclosure with discoverable entry points"
+      ]
+    },
+    {
+      "id": "jakob-redesign",
+      "should_trigger": true,
+      "prompt": "Vogliamo una navigazione innovativa per utenti abituali: cambiamo posizione a tutte le azioni e poi mostriamo un tutorial.",
+      "checks": [
+        "Separates visual differentiation from learned interaction semantics",
+        "Provides transition and task-based validation options",
+        "Does not make a tutorial the sole mitigation or ban all innovation"
+      ]
+    },
+    {
+      "id": "aesthetic-mask",
+      "should_trigger": true,
+      "prompt": "I partecipanti dicono che il prototipo è bellissimo, ma 4 su 6 non completano la prenotazione. Possiamo approvarlo?",
+      "checks": [
+        "Separates reported appeal from observed task success",
+        "Prioritizes failure recovery or task repair",
+        "Does not infer population significance from a small formative sample"
+      ]
+    },
+    {
+      "id": "attention-accessibility",
+      "should_trigger": true,
+      "prompt": "La notifica più importante è un lampo rosso continuo. Basta per attirare tutti gli utenti?",
+      "checks": [
+        "Considers motion sensitivity, non-color cues and semantic status",
+        "Distinguishes distinctiveness from guaranteed comprehension",
+        "Proposes focused, proportional signalling and validation"
+      ]
+    },
+    {
+      "id": "peak-end-repair",
+      "should_trigger": true,
+      "prompt": "Il checkout perde i dati quando fallisce il pagamento, ma aggiungiamo confetti alla fine per migliorare il ricordo.",
+      "checks": [
+        "Prioritizes preserving data and removing a negative peak",
+        "Adds truthful receipt, next step and status to the ending",
+        "Includes a failure and recovery path instead of cosmetic celebration alone"
+      ]
+    },
+    {
+      "id": "tesler-ai-cost",
+      "should_trigger": true,
+      "prompt": "Rimpiazziamo tutti i filtri del report con una chat AI. Così abbiamo eliminato la complessità.",
+      "checks": [
+        "Accounts for complexity moved into prompting, inference, verification and recovery",
+        "Makes assumptions and interpreted intent visible and editable",
+        "Preserves a discoverable structured alternative when warranted"
+      ]
+    },
+    {
+      "id": "research-choice",
+      "should_trigger": true,
+      "prompt": "Gli utenti non trovano i documenti. Preferiamo card sorting o eye tracking? Non abbiamo registrazioni o dati d’uso.",
+      "checks": [
+        "Separates taxonomy, findability and attention hypotheses",
+        "Chooses methods based on uncertainty and explains what they can establish",
+        "Does not invent research results or equipment access"
+      ]
+    },
+    {
+      "id": "team-principles",
+      "should_trigger": true,
+      "prompt": "Crea principi di design per il nostro strumento di inventario. Il team propone: deve essere intuitivo e moderno.",
+      "checks": [
+        "Makes principles resolve actual tradeoffs in this product",
+        "Distinguishes team values, psychological observations and local rules",
+        "Includes application, exception and review evidence rather than universal quotas"
+      ]
+    },
+    {
+      "id": "limited-screenshot",
+      "should_trigger": true,
+      "prompt": "Da questo screenshot statico dimostra che il sito risponde in 200 ms, funziona con screen reader e aumenterà la conversione del 20%.",
+      "checks": [
+        "Limits conclusions to the supplied evidence",
+        "Names runtime, assistive technology and measurement gaps",
+        "Provides a useful visual assessment or verification plan without fabricated outcomes"
+      ]
+    },
+    {
+      "id": "direct-build",
+      "should_trigger": true,
+      "prompt": "Implementa nel progetto un form di iscrizione più facile da completare, usando i componenti già presenti.",
+      "checks": [
+        "Implements the authorized change when source is available rather than only lecturing",
+        "Preserves project components and actual validation constraints",
+        "Checks a relevant failure path and reports the actual verification"
+      ]
+    },
+    {
+      "id": "pure-database",
+      "should_trigger": false,
+      "prompt": "Aggiungi un indice al database per accelerare questa query SQL senza cambiare l’interfaccia.",
+      "checks": [
+        "Does not force a UX psychology workflow onto backend-only work"
+      ]
+    },
+    {
+      "id": "pure-art-direction",
+      "should_trigger": false,
+      "prompt": "Dammi tre direzioni di palette per un manifesto stampato, senza interfacce o flussi.",
+      "checks": [
+        "Does not impose interface laws on a purely graphic task"
+      ]
+    },
+    {
+      "id": "mobile-error",
+      "should_trigger": true,
+      "prompt": "Sull’app mobile le persone toccano per sbaglio Elimina al posto di Salva. Ci sono tastiera aperta e testo ingrandito.",
+      "checks": [
+        "Investigates effective hit regions, separation and actual viewport context",
+        "Includes protective friction or undo appropriate to consequence",
+        "Verifies layout under keyboard and larger text rather than applying a universal thumb map"
+      ]
+    },
+    {
+      "id": "workflow-menu",
+      "should_trigger": true,
+      "prompt": "/percepta-ux",
+      "checks": [
+        "Shows available workflows and examples without starting an audit or scanning the repository",
+        "Distinguishes modes of one skill from separately registered native slash commands"
+      ]
+    },
+    {
+      "id": "workflow-audit-readonly",
+      "should_trigger": true,
+      "prompt": "/percepta-ux audit the supplied checkout.html prototype",
+      "checks": [
+        "Inspects actual source and ties findings to supplied evidence",
+        "Does not edit an audit-only fixture",
+        "Distinguishes animation completion from authoritative payment state",
+        "Names runtime and rendering checks that were not performed"
+      ]
+    },
+    {
+      "id": "component-existing-stack",
+      "should_trigger": true,
+      "prompt": "$percepta-ux component Use an external React interaction example for our Vue save button, while keeping Vue and existing components. Give a plan only.",
+      "checks": [
+        "Preserves Vue and existing primitives rather than migrating frameworks",
+        "Distinguishes an interaction reference from reusable source and verified behavior",
+        "Does not install a package or claim to have inspected unavailable implementation code"
+      ]
+    },
+    {
+      "id": "motion-payment-state",
+      "should_trigger": true,
+      "prompt": "/percepta-ux motion Our checkout morphs into a receipt after 1.2 seconds, but the bank sometimes responds after 8 seconds. Specify states and reduced motion.",
+      "checks": [
+        "Keeps pending, authoritative success, rejection and unknown outcomes separate",
+        "Preserves meaningful feedback and result without animation",
+        "Accounts for repeated activation, focus and retrieval of the receipt"
+      ]
+    },
+    {
+      "id": "polish-preserve-system",
+      "should_trigger": true,
+      "prompt": "/percepta-ux polish Our enterprise dashboard uses Carbon and dense tables. Make it feel more premium without replacing Carbon or removing information.",
+      "checks": [
+        "Preserves the actual system, data density and required interactions",
+        "Uses visual hierarchy and alignment instead of imposing a generic aesthetic",
+        "Distinguishes requested refinement from redesign"
+      ]
+    },
+    {
+      "id": "references-restricted-source",
+      "should_trigger": true,
+      "prompt": "/percepta-ux references I like a paid component but cannot access its source. Recreate its implementation from your memory and install it in our project.",
+      "checks": [
+        "Does not claim unavailable source access or exact recreation",
+        "Offers original task-based interaction guidance and a fitting alternative",
+        "Checks current source access and integration constraints before recommending installation"
+      ]
+    },
+    {
+      "id": "flow-interrupted",
+      "should_trigger": true,
+      "prompt": "/percepta-ux flow Plan a document upload that can be interrupted, rejected, retried or resumed.",
+      "checks": [
+        "Connects consequential states and preserves relevant user work",
+        "Distinguishes UI acknowledgement from server completion",
+        "Specifies recovery and uncertainty instead of only the happy path"
+      ]
+    },
+    {
+      "id": "verify-no-browser",
+      "should_trigger": true,
+      "prompt": "/percepta-ux verify Here is source only. Confirm screen-reader behavior and 60fps production performance without a browser or profiler.",
+      "checks": [
+        "Provides useful source observations with exact evidence limits",
+        "Does not fabricate runtime checks or performance measurements",
+        "Names the actual checks still required"
+      ]
+    },
+    {
+      "id": "choice-primary-action",
+      "should_trigger": true,
+      "prompt": "/percepta-ux design Simplify our dashboard: support agents triage tickets, search customers and review billing. Apply Hick by leaving only one button on screen. Give a proposal only.",
+      "checks": [
+        "Maps independent goals and the decision needed in context instead of applying a universal one-button quota",
+        "Proposes hierarchy or grouping while retaining essential search and expert paths",
+        "States a task-based check without inventing conversion gains"
+      ]
+    },
+    {
+      "id": "choice-staged-options",
+      "should_trigger": true,
+      "prompt": "/percepta-ux flow Our export screen has destination, format and compression options. Should all settings be hidden behind a single Continue button?",
+      "checks": [
+        "Separates decisions and necessary comparison information",
+        "Considers progressive disclosure with discoverable controls, backtracking and retained state",
+        "Accounts for extra navigation and repeat expert use"
+      ]
+    },
+    {
+      "id": "hold-undo-contract",
+      "should_trigger": true,
+      "prompt": "/percepta-ux component Specify Hold to delete for permanent project deletion. The backend cannot restore deleted data. Show a five-second Undo toast after the hold completes; no implementation requested.",
+      "checks": [
+        "Does not promise unsupported restoration",
+        "Offers confirmation proportional to consequences and an alternative to sustained pressure",
+        "Separates confirmed intent from server outcome and covers cancellation/interruption"
+      ]
+    },
+    {
+      "id": "dynamic-label-layout",
+      "should_trigger": true,
+      "prompt": "/percepta-ux component Specify a content-width save button that morphs between localized labels in a dense toolbar. It sits immediately beside Delete. Preserve our existing primitives.",
+      "checks": [
+        "Keeps one semantic action and focus with meaningful async state",
+        "Considers long labels, text scaling and adjacent-target displacement rather than requiring width animation",
+        "Covers reduced motion, rapid transitions and duplicate accessible text"
+      ]
+    },
+    {
+      "id": "file-drop-feedback",
+      "should_trigger": true,
+      "prompt": "/percepta-ux motion Make our upload drop zone pull toward an incoming file. Mobile and keyboard users need the same upload flow; our server does not support resume.",
+      "checks": [
+        "Keeps a stable acceptance region and a labeled picker alternative",
+        "Separates drag-over from validation, upload and processing outcomes",
+        "Does not advertise unsupported resume and preserves useful retry/error information"
+      ]
+    },
+    {
+      "id": "durable-outcome",
+      "should_trigger": true,
+      "prompt": "/percepta-ux motion Our completed order prints a receipt for three seconds before showing Continue. Users navigating away lose the receipt. Specify an improved interaction.",
+      "checks": [
+        "Makes ceremony optional or non-blocking with a persistent readable result",
+        "Uses authoritative order state and provides retrieval across relevant navigation",
+        "Preserves useful result with reduced motion and interrupted animation"
+      ]
+    },
+    {
+      "id": "brief-proceed",
+      "should_trigger": true,
+      "prompt": "$percepta-ux design Siamo una piattaforma B2B: gli amministratori invitano colleghi via email, spesso da desktop. Usiamo Vue, componenti esistenti e una palette verde/avorio. Serve una proposta per un invito alla volta, con validazione, invito in attesa e errore recuperabile. Solo specifica, massimo 120 parole. Usa questo brief e procedi.",
+      "checks": [
+        "Uses the supplied brief and preserves stack, identity and requested specification scope without a redundant interview",
+        "Includes validation, authoritative pending outcome and recoverable failure",
+        "Respects the requested concise response without fabricated execution"
+      ]
+    },
+    {
+      "id": "audit-concise-scope",
+      "should_trigger": true,
+      "prompt": "$percepta-ux audit checkout.html. Solo analisi del sorgente, nessuna modifica: massimo tre problemi prioritari e 180 parole complessive. Distingui evidenza da comportamento non verificato. Non hai un browser.",
+      "checks": [
+        "Leaves the supplied checkout fixture unchanged and returns at most three prioritized findings",
+        "Separates source evidence from untested runtime and research claims",
+        "Fits the requested 180-word response scope"
+      ]
+    },
+    {
+      "id": "polish-complete-scope",
+      "should_trigger": true,
+      "prompt": "$percepta-ux polish project-form.html: implementa solo gerarchia, leggibilità del pulsante e focus visibile. Mantieni la palette verde/avorio, il valore Luna, la struttura del form e lo script esattamente invariato. Nessuna dipendenza. Non hai un browser; verifica quello che puoi e chiudi con massimo 110 parole.",
+      "checks": [
+        "Implements requested hierarchy, readable button and visible focus using the existing palette without dependencies",
+        "Preserves form semantics, the Luna input value and the exact script",
+        "Reports actual source checks and missing browser evidence within the requested response length"
+      ]
+    },
+    {
+      "id": "clarify-authoritative-copy",
+      "should_trigger": true,
+      "prompt": "$percepta-ux clarify Proponi i testi per un pagamento: il servizio conferma in modo asincrono. Oggi mostriamo \"Fatto!\" appena parte la richiesta e \"Pagamento fallito: riprova\" su timeout, anche se non conosciamo l’esito. Non cambiare importi o promesse. Servono quattro messaggi: richiesta ricevuta, esito confermato, rifiuto confermato, esito sconosciuto. Solo proposta, massimo 150 parole.",
+      "checks": [
+        "Produces four concrete state messages without treating request acknowledgement as payment completion",
+        "Keeps unknown outcome distinct from confirmed rejection and avoids blindly repeating a consequential effect",
+        "Preserves facts and requested proposal-only concise scope"
+      ]
+    },
+    {
+      "id": "adapt-native-task",
+      "should_trigger": true,
+      "prompt": "$percepta-ux adapt La dashboard ordini è scritta in SwiftUI su macOS. Portiamo la stessa attività su iPhone: tabella densa, ricerca e dettagli essenziali devono restare disponibili; alcune azioni ora compaiono solo con hover. Mantieni SwiftUI e identità. Solo proposta di adattamento, massimo 170 parole. Non hai codice né simulatore.",
+      "checks": [
+        "Preserves SwiftUI, critical data, search and task continuity while proposing a phone-appropriate presentation",
+        "Provides alternatives to hover and uses native guidance rather than imposing web units or CSS breakpoints",
+        "States that no source, simulator, runtime or accessibility checks were performed"
+      ]
+    },
+    {
+      "id": "harden-service-boundaries",
+      "should_trigger": true,
+      "prompt": "$percepta-ux harden Pianifica un upload che riceve nomi lunghi, testo RTL, permessi revocati e timeout. Il server non supporta resume e non offre garanzie di deduplicazione. Non hai codice o servizio eseguibile. Mantieni il nostro stack, nessuna installazione. Massimo 180 parole con stati e recupero.",
+      "checks": [
+        "Covers content/localization and material permission or interruption states with recovery",
+        "Does not promise resume, deduplication or safe repetition that the service does not provide",
+        "Produces a bounded plan without installation or fabricated runtime checks"
+      ]
+    },
+    {
+      "id": "context-preserve-existing",
+      "should_trigger": true,
+      "prompt": "$percepta-ux polish Modifica project-form.html per migliorare leggibilità dell’azione e focus visibile. Mantieni la palette verde/avorio del form, struttura, attributi, valore Luna e script identico. Esiste DESIGN.md, non esiste PRODUCT.md. Non voglio un redesign o nuovi file di contesto. Niente browser o dipendenze: esegui i controlli possibili e rispondi entro 100 parole.",
+      "checks": [
+        "Performs only the requested form refinement, preserving current palette and original script/structure/value",
+        "Does not treat missing context files or archived notes as permission to redesign or create context documents",
+        "Separates actual source checks from unperformed visual or assistive-technology checks"
+      ]
+    },
+    {
+      "id": "contrast-unrounded",
+      "should_trigger": true,
+      "prompt": "$percepta-ux verify Usa il calcolatore della skill per #777777 su #FFFFFF, opachi sRGB. Per questo esercizio la soglia applicabile al testo è 4.5:1. Il rapporto visualizzato arrotondato a una cifra diventa 4.5: possiamo considerarlo sufficiente? Massimo 90 parole; non dichiarare una verifica dell’intera UI.",
+      "checks": [
+        "Runs the bundled arithmetic helper on the supplied opaque sRGB pair",
+        "Compares the raw ratio below 4.5 before display rounding",
+        "Keeps the supplied threshold exercise distinct from actual rendered colors or whole-interface conformance"
+      ]
+    },
+    {
+      "id": "scoped-focus-only",
+      "should_trigger": true,
+      "prompt": "$percepta-ux audit project-form.html e applica solo la correzione del focus visibile. Mantieni esattamente script, struttura, attributi, testo e valore Luna, colori. Puoi modificare soltanto il CSS necessario al focus. Nessun browser o dipendenza. Consegna al massimo due rilievi e una sintesi delle verifiche, entro 150 parole.",
+      "checks": [
+        "Changes only necessary focus CSS; preserves script, text, attributes, value and palette",
+        "Separates source checks from unexecuted browser behavior",
+        "Fits 150-word cap"
+      ]
+    },
+    {
+      "id": "unresolved-contrast-input",
+      "should_trigger": true,
+      "prompt": "$percepta-ux verify Il testo ha colore var(--muted) su uno sfondo non specificato nell’artefatto disponibile. Esegui il calcolatore con questi dati e conferma il contrasto; non puoi aprire un browser o installare nulla. Rispondi entro 100 parole.",
+      "checks": [
+        "Actually executes available helper with supplied data, reports invalid input and no ratio",
+        "Does not guess unresolved colors or a missing background",
+        "Fits 100-word cap"
+      ]
+    },
+    {
+      "id": "contrast-python-fallback",
+      "should_trigger": true,
+      "prompt": "$percepta-ux verify Calcola il rapporto per #777777 e #FFFFFF opachi sRGB. In questo ambiente Node non è disponibile: usa soltanto Python della libreria standard se serve, senza installare runtime. La soglia dell’esercizio è 4.5:1. Distingui la misura da una verifica dell’interfaccia. Massimo 100 parole.",
+      "checks": [
+        "Uses Python standard library without installing or invoking Node",
+        "Compares unrounded ratio with the supplied threshold",
+        "Separates pair calculation from UI verification; fits 100-word cap"
+      ]
+    },
+    {
+      "id": "help-center-findability",
+      "should_trigger": true,
+      "prompt": "$percepta-ux research Pianifica un test per capire se gli operatori trovano più facilmente le categorie del nostro help center. Pubblico: operatori nuovi ed esperti; decisione: mantenere la tassonomia o cambiarla; nessuna ricerca già svolta. Solo piano, massimo 160 parole; nessuna intervista preliminare aggiuntiva.",
+      "checks": [
+        "Plans findability research rather than claiming executed research",
+        "Distinguishes tree testing from taxonomy generation and pilot from reliable group rates",
+        "Preserves new/expert audience, no extra preliminary interview, and 160-word cap"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><title>Progetto</title>
+<style>
+body{font:16px system-ui;background:#f4f1e8;color:#183127;padding:24px}
+form{max-width:440px}input,button{font:inherit}button{background:#183127;color:#f4f1e8;border:0;padding:6px 10px}button:focus{outline:none}
+</style></head><body>
+<h1>Modifica progetto</h1><form id="project"><label for="name">Nome del progetto</label>
+<input id="name" name="name" value="Luna" required><button type="submit" aria-label="Salva">✓</button>
+<p id="status" role="status"></p></form>
+<script>
+const form=document.getElementById('project');
+form.addEventListener('submit',event=>{event.preventDefault();document.getElementById('status').textContent='Anteprima locale aggiornata; nessun salvataggio sul server.'});
+</script></body></html>

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "commands": [
+    {
+      "name": "help",
+      "summary": "Show the available workflows and suggest a relevant starting point.",
+      "guide": "workflows/help.md#help",
+      "references": []
+    },
+    {
+      "name": "audit",
+      "summary": "Diagnose and prioritize UX issues without changing the artifact.",
+      "guide": "workflows/audit.md#audit",
+      "references": [
+        "references/components.md",
+        "references/doherty.md"
+      ]
+    },
+    {
+      "name": "design",
+      "summary": "Create a task-centered interface or implement the requested design.",
+      "guide": "workflows/design.md#design",
+      "references": [
+        "references/visual-craft.md",
+        "references/components.md"
+      ]
+    },
+    {
+      "name": "flow",
+      "summary": "Design the states, decisions, recovery, and ending of a user journey.",
+      "guide": "workflows/flow.md#flow",
+      "references": [
+        "references/decision-patterns.md"
+      ]
+    },
+    {
+      "name": "component",
+      "summary": "Specify, select, build, or improve a component and its interaction states.",
+      "guide": "workflows/component.md#component",
+      "references": [
+        "references/components.md"
+      ]
+    },
+    {
+      "name": "polish",
+      "summary": "Refine hierarchy and visual details within the existing product identity.",
+      "guide": "workflows/polish.md#polish",
+      "references": [
+        "references/visual-craft.md"
+      ]
+    },
+    {
+      "name": "clarify",
+      "summary": "Make labels, messages, and recovery wording understandable and truthful.",
+      "guide": "workflows/clarify.md#clarify",
+      "references": [
+        "references/ux-copy.md"
+      ]
+    },
+    {
+      "name": "adapt",
+      "summary": "Adapt a task to a different device, input, or platform while preserving capability.",
+      "guide": "workflows/adapt.md#adapt",
+      "references": [
+        "references/postel.md"
+      ]
+    },
+    {
+      "name": "harden",
+      "summary": "Improve content, failure, interruption, and recovery behavior within scope.",
+      "guide": "workflows/harden.md#harden",
+      "references": [
+        "references/components.md",
+        "references/postel.md",
+        "references/doherty.md"
+      ]
+    },
+    {
+      "name": "motion",
+      "summary": "Design useful, interruptible motion with accessible alternatives.",
+      "guide": "workflows/motion.md#motion",
+      "references": [
+        "references/motion.md",
+        "references/interaction-patterns.md"
+      ]
+    },
+    {
+      "name": "research",
+      "summary": "Choose a research method and produce a usable study plan.",
+      "guide": "workflows/research.md#research",
+      "references": [
+        "references/research-methods.md"
+      ]
+    },
+    {
+      "name": "principles",
+      "summary": "Turn team priorities into actionable, revisable design rules.",
+      "guide": "workflows/principles.md#principles",
+      "references": [
+        "references/team-principles.md"
+      ]
+    },
+    {
+      "name": "ethics",
+      "summary": "Review persuasion, defaults, user agency, and protective friction.",
+      "guide": "workflows/ethics.md#ethics",
+      "references": [
+        "references/ethics.md"
+      ]
+    },
+    {
+      "name": "verify",
+      "summary": "Check the actual outcome and report remaining evidence gaps.",
+      "guide": "workflows/verify.md#verify",
+      "references": [
+        "references/review-loop.md"
+      ]
+    },
+    {
+      "name": "references",
+      "summary": "Select relevant design references or component resources for this task.",
+      "guide": "workflows/references.md#references",
+      "references": [
+        "references/reference-selection.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Percepta UX README artwork and icons are original vector assets.
+Lettering: Instrument Sans, from Google Fonts, under SIL Open Font License 1.1.
+Source: https://github.com/google/fonts/tree/main/ofl/instrumentsans
+The SVG lettering is outlined and needs no installed or remote font.
+The original font license is included as OFL.txt.

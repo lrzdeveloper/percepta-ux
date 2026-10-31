@@ -1,0 +1,4 @@
+interface:
+  display_name: "Percepta UX"
+  short_description: "Turn UX psychology into better product decisions"
+  default_prompt: "Use $percepta-ux audit to review this interface, explain the relevant psychology, and prioritize verifiable improvements."
