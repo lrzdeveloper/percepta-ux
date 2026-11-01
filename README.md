@@ -6,16 +6,12 @@
 </h1>
 
 <p align="center">
-  <a href="package.json"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/badge-version.svg" alt="Version 0.2.0" height="28"></a>
-  <a href="package.json"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/badge-node.svg" alt="Node.js 22.20 or later" height="28"></a>
-  <a href="https://agentskills.io/specification"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/badge-format.svg" alt="Agent Skills format" height="28"></a>
-  <a href="LICENSE"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/badge-license.svg" alt="MIT License" height="28"></a>
-</p>
-
-<p align="center">
   <a href="https://www.npmjs.com/package/@lrzdeveloper/percepta-ux"><img src="https://img.shields.io/npm/v/@lrzdeveloper/percepta-ux.svg" alt="npm version" height="20"></a>
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/node/v/@lrzdeveloper/percepta-ux?label=Node.js" alt="Node.js requirement" height="20"></a>
+  <a href="https://agentskills.io/specification"><img src="https://img.shields.io/badge/Agent_Skills-standard-183127" alt="Agent Skills format" height="20"></a>
+  <a href="https://github.com/lrzdeveloper/percepta-ux/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@lrzdeveloper/percepta-ux.svg" alt="MIT License" height="20"></a>
   <a href="https://skills.sh/lrzdeveloper/percepta-ux/percepta-ux"><img src="https://skills.sh/b/lrzdeveloper/percepta-ux" alt="skills.sh installs" height="20"></a>
-  <a href="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml"><img src="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml/badge.svg" alt="Validation CI" height="20"></a>
+  <a href="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/lrzdeveloper/percepta-ux/validate.yml?label=CI" alt="Validation CI" height="20"></a>
 </p>
 
 <p align="center">
@@ -37,10 +33,10 @@
 
 **Install once. Use in your coding agents.**
 
-Run Percepta's installer from npm:
+Install from the public npm package:
 
 ```bash
-npx @lrzdeveloper/percepta-ux
+npx @lrzdeveloper/percepta-ux@latest
 ```
 
 Or use the skills CLI:
@@ -51,6 +47,8 @@ npx skills add lrzdeveloper/percepta-ux --skill percepta-ux
 
 To run directly from GitHub, use `npx git+https://github.com/lrzdeveloper/percepta-ux.git`.
 For a global CLI, run `npm install -g @lrzdeveloper/percepta-ux`, then `percepta-ux`.
+
+No GitHub or npm account is required to install.
 
 **Requires:** Node.js **22.20+**, npm/npx, and Git.
 The npx wrapper supports macOS and Linux; use skills directly on other platforms.
