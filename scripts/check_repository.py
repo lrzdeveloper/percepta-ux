@@ -29,6 +29,7 @@ PATH_RULES = [
     r'skills/percepta-ux/scripts/[a-z0-9-]+\.mjs',
 ]
 SECRET_RULES = {
+    'npm credential': re.compile(rb'\bnpm_[A-Za-z0-9]{30,}\b'),
     'GitHub credential': re.compile(rb'\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,})\b'),
     'API credential': re.compile(rb'\b(?:sk-ant-[A-Za-z0-9_-]{40,}|sk-proj-[A-Za-z0-9_-]{40,}|sk-svcacct-[A-Za-z0-9_-]{40,})\b'),
     'AWS access key': re.compile(rb'\b(?:AKIA|ASIA)[A-Z0-9]{16}\b'),

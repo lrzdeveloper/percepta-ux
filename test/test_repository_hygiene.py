@@ -54,6 +54,15 @@ class RepositoryHygieneTests(unittest.TestCase):
         self.assertIn('GitHub credential', result.stderr)
         self.assertNotIn(credential, result.stderr + result.stdout)
 
+    def test_npm_credential_is_blocked(self):
+        credential = 'np' + 'm_' + 'X' * 36
+        self.stage('README.md', credential)
+        result = subprocess.run([sys.executable, str(SCRIPT), '--repo', str(self.root), '--staged'],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn('npm credential', result.stderr)
+        self.assertNotIn(credential, result.stdout + result.stderr)
+
     def test_removed_secret_stays_blocked_in_history(self):
         self.stage('README.md', 'gh' + 'p_' + 'X' * 36)
         self.commit()
