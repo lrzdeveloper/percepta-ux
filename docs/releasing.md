@@ -13,21 +13,29 @@ badge and changelog aligned with the version being released.
    explicitly authorizes replacing a release.
 4. Publish concise feature notes with one uploaded portable ZIP. For an authorized
    update to an existing release, replace that asset and edit its notes.
-5. Publish the npm package from the tested tag with `npm publish --access public`.
-   Use the signed-in maintainer account and complete npm's authentication check.
-   Registry versions are immutable: after `0.2.0` is published, any package content
+5. Publish npm through the **Publish to npm** GitHub Actions workflow. It runs
+   when a release is published or can be started manually for an existing version
+   tag. Configure an npm publishing token as the repository secret `NPM_TOKEN`;
+   keep it outside Git. The workflow validates the tagged source and publishes
+   with provenance. Token permissions must cover the package, and npm applies
+   its own authentication policy. No repository rule requires contributors to
+   enable account-level 2FA.
+6. Registry versions are immutable: after `0.2.0` is published, any package content
    change requires a new version. Do not move a tag used by a published npm version.
-6. Verify the source tag, CI, archive integrity, bundled license and installation.
+7. Verify the source tag, CI, archive integrity, bundled license and installation.
    Compare the uploaded asset digest with the local build. Verify
    `npm view @lrzdeveloper/percepta-ux version` and an installation from the registry.
    Keep working records outside the repository.
-7. Check the public skills.sh page after a normal direct skills installation.
+8. Check the public skills.sh page after a normal direct skills installation.
    Catalog indexing and page caches can take time to update.
 
 GitHub supplies source-code archives automatically. Separate provenance files,
 checksums, duplicate `.skill`/`.zip` uploads and npm tarballs are not release assets.
 The npm package provides the installer and bundled guidance. Its install command
 uses the matching GitHub version tag through the pinned skills CLI. Keep the npm
-package, GitHub tag and portable release archive aligned. A first publication uses
-maintainer authentication; optional future CI publishing should use npm trusted
-publishing with a workflow scoped to this repository, without storing tokens in Git.
+package, GitHub tag and portable release archive aligned. GitHub does not expose
+saved secret values: a token configured in a different repository must be supplied
+again through repository secrets, or replaced by an appropriately scoped token.
+For staged versions, npm requires separate approval; a token that bypasses 2FA for
+direct publishing does not bypass staged-package approval. Avoid staging when the
+intended release process is direct CI publishing.
