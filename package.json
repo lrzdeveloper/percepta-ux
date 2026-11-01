@@ -1,6 +1,6 @@
 {
   "name": "@lrzdeveloper/percepta-ux",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "UX psychology for interface design, implementation, and review in coding agents.",
   "type": "module",
   "bin": {

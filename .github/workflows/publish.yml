@@ -8,7 +8,7 @@ on:
       tag:
         description: Existing release tag to publish
         required: true
-        default: v0.2.0
+        default: v0.2.1
 
 permissions:
   contents: read
@@ -32,7 +32,7 @@ jobs:
           import { appendFileSync } from 'node:fs';
           const tag = process.env.RELEASE_TAG;
           if (!/^v\d+\.\d+\.\d+(?:-[a-zA-Z0-9.-]+)?$/.test(tag ?? '')) {
-            throw new Error('Select an existing version tag such as v0.2.0.');
+            throw new Error('Select an existing version tag such as v0.2.1.');
           }
           appendFileSync(process.env.GITHUB_OUTPUT, `tag=${tag}\n`);
           JS
@@ -65,7 +65,29 @@ jobs:
       - run: npm test
       - run: python -m unittest discover -s test -p 'test_*.py'
       - run: python scripts/validate.py
+      - name: Check whether the version is already published
+        id: registry
+        run: |
+          node --input-type=module <<'JS'
+          import { appendFileSync, readFileSync } from 'node:fs';
+          const manifest = JSON.parse(readFileSync('package.json', 'utf8'));
+          const url = `https://registry.npmjs.org/${encodeURIComponent(manifest.name)}/${manifest.version}`;
+          const response = await fetch(url);
+          if (response.status !== 200 && response.status !== 404) {
+            throw new Error(`Could not check npm publication status: ${response.status}`);
+          }
+          const published = response.status === 200;
+          if (published) {
+            const metadata = await response.json();
+            if (metadata.name !== manifest.name || metadata.version !== manifest.version) {
+              throw new Error('Unexpected npm package identity.');
+            }
+            console.log(`npm ${manifest.version} is already published; preserving the immutable version.`);
+          }
+          appendFileSync(process.env.GITHUB_OUTPUT, `publish=${!published}\n`);
+          JS
       - name: Check npm publishing is configured
+        if: steps.registry.outputs.publish == 'true'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
@@ -74,6 +96,7 @@ jobs:
             exit 1
           fi
       - name: Publish with provenance
+        if: steps.registry.outputs.publish == 'true'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TAG: ${{ github.event.release.prerelease && 'next' || 'latest' }}

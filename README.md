@@ -10,7 +10,7 @@
   <a href="https://nodejs.org/"><img src="https://img.shields.io/node/v/@lrzdeveloper/percepta-ux?label=Node.js" alt="Node.js requirement" height="20"></a>
   <a href="https://agentskills.io/specification"><img src="https://img.shields.io/badge/Agent_Skills-standard-183127" alt="Agent Skills format" height="20"></a>
   <a href="https://github.com/lrzdeveloper/percepta-ux/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@lrzdeveloper/percepta-ux.svg" alt="MIT License" height="20"></a>
-  <a href="https://skills.sh/lrzdeveloper/percepta-ux/percepta-ux"><img src="https://skills.sh/b/lrzdeveloper/percepta-ux" alt="skills.sh installs" height="20"></a>
+  <a href="https://skills.sh/lrzdeveloper/percepta-ux/percepta-ux"><img src="https://skills.sh/b/lrzdeveloper/percepta-ux" alt="Skills" height="20"></a>
   <a href="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/lrzdeveloper/percepta-ux/validate.yml?label=CI" alt="Validation CI" height="20"></a>
 </p>
 
@@ -44,9 +44,6 @@ Or use the skills CLI:
 ```bash
 npx skills add lrzdeveloper/percepta-ux --skill percepta-ux
 ```
-
-To run directly from GitHub, use `npx git+https://github.com/lrzdeveloper/percepta-ux.git`.
-For a global CLI, run `npm install -g @lrzdeveloper/percepta-ux`, then `percepta-ux`.
 
 No GitHub or npm account is required to install.
 
@@ -112,9 +109,9 @@ underlying skills CLI's update and removal behavior.
 The public npm package is [`@lrzdeveloper/percepta-ux`](https://www.npmjs.com/package/@lrzdeveloper/percepta-ux);
 the installed command is `percepta-ux`. The portable skill is available through
 [skills.sh](https://skills.sh/lrzdeveloper/percepta-ux/percepta-ux) and the
-[GitHub release](https://github.com/lrzdeveloper/percepta-ux/releases/tag/v0.2.0).
+[GitHub release](https://github.com/lrzdeveloper/percepta-ux/releases/tag/v0.2.1).
 The npm installer selects the GitHub tag matching its package version. For a
-reproducible install, use `npx @lrzdeveloper/percepta-ux@0.2.0`.
+reproducible install, use `npx @lrzdeveloper/percepta-ux@0.2.1`.
 
 The skills.sh catalog tracks installations made through the skills CLI. The
 wrapper opts out of that reporting; the direct skills command uses the CLI's
@@ -165,7 +162,7 @@ npx @lrzdeveloper/percepta-ux prompt polish "Improve the dashboard while preserv
 For a request that should carry its guidance with it, generate a complete prompt:
 
 ```bash
-npx @lrzdeveloper/percepta-ux@0.2.0 prompt --with-context research "Plan a study for our help center; maximum 150 words"
+npx @lrzdeveloper/percepta-ux@0.2.1 prompt --with-context research "Plan a study for our help center; maximum 150 words"
 ```
 
 This prints the actual skill entrypoint, selected workflow, and every guide linked

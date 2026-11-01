@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.1 — 2026-11-01
+
+- One row of six standard badges, all 20 px high, with one npm badge and one
+  badge named Skills.
+- Simplified public installation instructions and refreshed version-pinned
+  examples.
+- Removed the alternate GitHub launch and global CLI paragraph from Quick start.
+
 ## 0.2.0 — 2026-10-31
 
 - Fifteen workflows for interface review, implementation, interaction design,
