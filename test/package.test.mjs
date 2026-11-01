@@ -16,7 +16,10 @@ test('npm ships the executable and complete portable skill, excluding developer 
       env: { ...process.env, npm_config_cache: join(temporary, 'npm-cache') },
     });
     assert.equal(result.status, 0, result.stderr);
-    const [{ files }] = JSON.parse(result.stdout);
+    const metadata = JSON.parse(result.stdout);
+    const packages = Array.isArray(metadata) ? metadata : Object.values(metadata);
+    assert.equal(packages.length, 1);
+    const [{ files }] = packages;
     const names = files.map((file) => file.path);
     assert.ok(names.includes('package.json'));
     assert.ok(names.includes('LICENSE'));
