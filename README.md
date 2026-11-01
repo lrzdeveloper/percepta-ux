@@ -13,9 +13,9 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@lrzdeveloper/percepta-ux"><img src="https://img.shields.io/npm/v/@lrzdeveloper/percepta-ux.svg" alt="npm version"></a>
-  <a href="https://skills.sh/lrzdeveloper/percepta-ux/percepta-ux"><img src="https://skills.sh/b/lrzdeveloper/percepta-ux" alt="skills.sh installs"></a>
-  <a href="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml"><img src="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml/badge.svg" alt="Validation CI"></a>
+  <a href="https://www.npmjs.com/package/@lrzdeveloper/percepta-ux"><img src="https://img.shields.io/npm/v/@lrzdeveloper/percepta-ux.svg" alt="npm version" height="20"></a>
+  <a href="https://skills.sh/lrzdeveloper/percepta-ux/percepta-ux"><img src="https://skills.sh/b/lrzdeveloper/percepta-ux" alt="skills.sh installs" height="20"></a>
+  <a href="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml"><img src="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml/badge.svg" alt="Validation CI" height="20"></a>
 </p>
 
 <p align="center">
