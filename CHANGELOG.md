@@ -5,6 +5,7 @@
 - Fifteen workflows for interface review, implementation, interaction design,
   copy, adaptation, resilience, research, ethics and verification.
 - Twenty-five linked guides covering UX psychology and practical execution.
+- Public npm distribution, npm/skills install buttons and live package/CI badges.
 - GitHub installation through npx or skills, agent/scope selection, offline command
   discovery and prompt generation.
 - Full-context prompt preparation with entrypoint, workflow and linked guidance.

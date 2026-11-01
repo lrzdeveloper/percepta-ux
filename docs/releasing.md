@@ -13,11 +13,21 @@ badge and changelog aligned with the version being released.
    explicitly authorizes replacing a release.
 4. Publish concise feature notes with one uploaded portable ZIP. For an authorized
    update to an existing release, replace that asset and edit its notes.
-5. Verify the source tag, CI, archive integrity, bundled license and installation.
-   Compare the uploaded asset digest with the local build. Keep working records
-   outside the repository.
+5. Publish the npm package from the tested tag with `npm publish --access public`.
+   Use the signed-in maintainer account and complete npm's authentication check.
+   Registry versions are immutable: after `0.2.0` is published, any package content
+   change requires a new version. Do not move a tag used by a published npm version.
+6. Verify the source tag, CI, archive integrity, bundled license and installation.
+   Compare the uploaded asset digest with the local build. Verify
+   `npm view @lrzdeveloper/percepta-ux version` and an installation from the registry.
+   Keep working records outside the repository.
+7. Check the public skills.sh page after a normal direct skills installation.
+   Catalog indexing and page caches can take time to update.
 
 GitHub supplies source-code archives automatically. Separate provenance files,
 checksums, duplicate `.skill`/`.zip` uploads and npm tarballs are not release assets.
-The installer downloads Git source and selects its matching version tag; the npm
-package is not published to a registry.
+The npm package provides the installer and bundled guidance. Its install command
+uses the matching GitHub version tag through the pinned skills CLI. Keep the npm
+package, GitHub tag and portable release archive aligned. A first publication uses
+maintainer authentication; optional future CI publishing should use npm trusted
+publishing with a workflow scoped to this repository, without storing tokens in Git.

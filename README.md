@@ -1,15 +1,26 @@
 <h1 align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="docs/assets/percepta-header-compact.svg">
-    <img src="docs/assets/percepta-header.svg" alt="Percepta UX — Psychology into product decisions." width="1280">
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/percepta-header-compact.svg">
+    <img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/percepta-header.svg" alt="Percepta UX — Psychology into product decisions." width="1280">
   </picture>
 </h1>
 
 <p align="center">
-  <a href="package.json"><img src="docs/assets/badge-version.svg" alt="Version 0.2.0" height="28"></a>
-  <a href="package.json"><img src="docs/assets/badge-node.svg" alt="Node.js 22.20 or later" height="28"></a>
-  <a href="https://agentskills.io/specification"><img src="docs/assets/badge-format.svg" alt="Agent Skills format" height="28"></a>
-  <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT License" height="28"></a>
+  <a href="package.json"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/badge-version.svg" alt="Version 0.2.0" height="28"></a>
+  <a href="package.json"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/badge-node.svg" alt="Node.js 22.20 or later" height="28"></a>
+  <a href="https://agentskills.io/specification"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/badge-format.svg" alt="Agent Skills format" height="28"></a>
+  <a href="LICENSE"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/badge-license.svg" alt="MIT License" height="28"></a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@lrzdeveloper/percepta-ux"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/button-npm.svg" alt="Get Percepta UX on npm" width="220" height="56"></a>
+  <a href="https://skills.sh/lrzdeveloper/percepta-ux/percepta-ux"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/button-skills.svg" alt="View Percepta UX on skills.sh" width="220" height="56"></a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@lrzdeveloper/percepta-ux"><img src="https://img.shields.io/npm/v/@lrzdeveloper/percepta-ux?label=npm&amp;color=183127" alt="npm version"></a>
+  <a href="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml"><img src="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml/badge.svg" alt="Validation CI"></a>
+  <a href="https://skills.sh/lrzdeveloper/percepta-ux"><img src="https://skills.sh/b/lrzdeveloper/percepta-ux" alt="skills.sh installs"></a>
 </p>
 
 <p align="center">
@@ -31,10 +42,10 @@
 
 **Install once. Use in your coding agents.**
 
-Run Percepta's installer directly from GitHub:
+Run Percepta's installer from npm:
 
 ```bash
-npx git+https://github.com/lrzdeveloper/percepta-ux.git
+npx @lrzdeveloper/percepta-ux
 ```
 
 Or use the skills CLI:
@@ -42,6 +53,9 @@ Or use the skills CLI:
 ```bash
 npx skills add lrzdeveloper/percepta-ux --skill percepta-ux
 ```
+
+To run directly from GitHub, use `npx git+https://github.com/lrzdeveloper/percepta-ux.git`.
+For a global CLI, run `npm install -g @lrzdeveloper/percepta-ux`, then `percepta-ux`.
 
 **Requires:** Node.js **22.20+**, npm/npx, and Git.
 The npx wrapper supports macOS and Linux; use skills directly on other platforms.
@@ -54,7 +68,7 @@ Inside an agent or without a terminal, its normal detection behavior applies.
 Install globally for Claude Code and Codex:
 
 ```bash
-npx git+https://github.com/lrzdeveloper/percepta-ux.git install -g -a claude-code codex
+npx @lrzdeveloper/percepta-ux install -g -a claude-code codex
 ```
 
 Equivalent skills command:
@@ -79,18 +93,18 @@ to the skills CLI pin should be tested before changing it. No MCP setup is requi
 
 ```bash
 # Discover without installing
-npx git+https://github.com/lrzdeveloper/percepta-ux.git install --list
+npx @lrzdeveloper/percepta-ux install --list
 
 # Preview the command without running it
-npx git+https://github.com/lrzdeveloper/percepta-ux.git install --dry-run
+npx @lrzdeveloper/percepta-ux install --dry-run
 
 # Check local prerequisites
-npx git+https://github.com/lrzdeveloper/percepta-ux.git doctor
+npx @lrzdeveloper/percepta-ux doctor
 
 # Manage installed skills
-npx git+https://github.com/lrzdeveloper/percepta-ux.git list
-npx git+https://github.com/lrzdeveloper/percepta-ux.git update
-npx git+https://github.com/lrzdeveloper/percepta-ux.git uninstall
+npx @lrzdeveloper/percepta-ux list
+npx @lrzdeveloper/percepta-ux update
+npx @lrzdeveloper/percepta-ux uninstall
 ```
 
 For global listing or removal, add `-g`; select agents as needed. You can also
@@ -102,10 +116,16 @@ underlying skills CLI's update and removal behavior.
 
 ### Distribution
 
-Percepta is distributed from GitHub. Use the full Git package URL above; the scoped
-name `@lrzdeveloper/percepta-ux` is not published to the npm registry. The package's
-`private` flag prevents accidental registry publication and is independent of
-GitHub repository visibility.
+The public npm package is [`@lrzdeveloper/percepta-ux`](https://www.npmjs.com/package/@lrzdeveloper/percepta-ux);
+the installed command is `percepta-ux`. The portable skill is available through
+[skills.sh](https://skills.sh/lrzdeveloper/percepta-ux/percepta-ux) and the
+[GitHub release](https://github.com/lrzdeveloper/percepta-ux/releases/tag/v0.2.0).
+The npm installer selects the GitHub tag matching its package version. For a
+reproducible install, use `npx @lrzdeveloper/percepta-ux@0.2.0`.
+
+The skills.sh catalog tracks installations made through the skills CLI. The
+wrapper opts out of that reporting; the direct skills command uses the CLI's
+normal telemetry settings.
 
 The wrapper uses **skills@1.7.4** and disables its telemetry and security-audit
 requests for that invocation. With skills directly, use `DISABLE_TELEMETRY=1` for
@@ -145,14 +165,14 @@ $percepta-ux component improve this save button within our existing Vue system
 The terminal can show the menu or build text to paste into your agent:
 
 ```bash
-npx git+https://github.com/lrzdeveloper/percepta-ux.git commands
-npx git+https://github.com/lrzdeveloper/percepta-ux.git prompt polish "Improve the dashboard while preserving our design system"
+npx @lrzdeveloper/percepta-ux commands
+npx @lrzdeveloper/percepta-ux prompt polish "Improve the dashboard while preserving our design system"
 ```
 
 For a request that should carry its guidance with it, generate a complete prompt:
 
 ```bash
-npx git+https://github.com/lrzdeveloper/percepta-ux.git#v0.2.0 prompt --with-context research "Plan a study for our help center; maximum 150 words"
+npx @lrzdeveloper/percepta-ux@0.2.0 prompt --with-context research "Plan a study for our help center; maximum 150 words"
 ```
 
 This prints the actual skill entrypoint, selected workflow, and every guide linked
@@ -215,10 +235,10 @@ unrounded ratio; it neither chooses the applicable criterion nor certifies the U
 
 | | Use Percepta to… | Get a concrete result |
 |:--:|:--|:--|
-| <img src="docs/assets/icons/inspect.svg" width="24" height="24" alt=""> | **Review an interface** | Locate obstacles in navigation, forms, onboarding, controls, or an entire journey. |
-| <img src="docs/assets/icons/design.svg" width="24" height="24" alt=""> | **Design and implement** | Translate a relevant psychological mechanism into a component, state, or workflow change. |
-| <img src="docs/assets/icons/research.svg" width="24" height="24" alt=""> | **Plan the research** | Choose a method that answers the uncertainty, with tasks, participants, and observable outcomes. |
-| <img src="docs/assets/icons/align.svg" width="24" height="24" alt=""> | **Align a team** | Turn a product priority into a useful design rule, with an application, exception, and review criterion. |
+| <img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/icons/inspect.svg" width="24" height="24" alt=""> | **Review an interface** | Locate obstacles in navigation, forms, onboarding, controls, or an entire journey. |
+| <img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/icons/design.svg" width="24" height="24" alt=""> | **Design and implement** | Translate a relevant psychological mechanism into a component, state, or workflow change. |
+| <img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/icons/research.svg" width="24" height="24" alt=""> | **Plan the research** | Choose a method that answers the uncertainty, with tasks, participants, and observable outcomes. |
+| <img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/icons/align.svg" width="24" height="24" alt=""> | **Align a team** | Turn a product priority into a useful design rule, with an application, exception, and review criterion. |
 
 The core guidance works without an MCP server, a network connection, or Node. The optional contrast helper runs locally with Node
 and calculates only an opaque sRGB color pair; it does not inspect a page. Tools help inspect a real product; missing tools
@@ -337,7 +357,7 @@ skills/percepta-ux/
   commands.json          Portable workflow catalog
   workflows/             15 focused task recipes
   references/            10 principles + 15 execution/research guides
-bin/cli.mjs              GitHub npx entrypoint
+bin/cli.mjs              npm and GitHub npx entrypoint
 test/                    CLI and npm package checks
 evals/                   Behavioral scenarios and synthetic fixtures
 scripts/                 Skill validator and package builder
@@ -356,7 +376,7 @@ Attribution for UX concepts and standards is maintained in the relevant guides.
 ---
 
 <p align="center">
-  <img src="docs/assets/percepta-mark.svg" width="36" height="36" alt=""><br>
+  <img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/percepta-mark.svg" width="36" height="36" alt=""><br>
   <strong>Observe clearly. Decide deliberately.</strong><br>
   Percepta UX · by <a href="https://github.com/lrzdeveloper">Luca De Rosa</a>
 </p>

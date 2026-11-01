@@ -27,8 +27,8 @@ Usage:
   percepta-ux prompt --with-context <workflow> <task>  Include full skill and workflow guides
 
 Examples:
-  npx git+https://github.com/lrzdeveloper/percepta-ux.git
-  npx git+https://github.com/lrzdeveloper/percepta-ux.git install -g -a claude-code codex
+  npx @lrzdeveloper/percepta-ux
+  npx @lrzdeveloper/percepta-ux install -g -a claude-code codex
   npx skills add lrzdeveloper/percepta-ux --skill percepta-ux
   percepta-ux prompt component "Improve the save button and its error state"
 
@@ -42,7 +42,7 @@ This installer selects the skill from the matching v${manifest.version} Git tag.
 Default scope is selected by skills; use -g for a global install.
 Requires Git access to the source repository and npm/npx.
 Telemetry and security-audit requests are disabled for this installer invocation.
-No npm registry publication or MCP configuration is performed.
+No MCP configuration is required.
 `;
 
 export function supportsNode(version) {
