@@ -13,14 +13,9 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@lrzdeveloper/percepta-ux"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/button-npm.svg" alt="Get Percepta UX on npm" width="220" height="56"></a>
-  <a href="https://skills.sh/lrzdeveloper/percepta-ux/percepta-ux"><img src="https://raw.githubusercontent.com/lrzdeveloper/percepta-ux/main/docs/assets/button-skills.svg" alt="View Percepta UX on skills.sh" width="220" height="56"></a>
-</p>
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/@lrzdeveloper/percepta-ux"><img src="https://img.shields.io/npm/v/@lrzdeveloper/percepta-ux?label=npm&amp;color=183127" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@lrzdeveloper/percepta-ux"><img src="https://img.shields.io/npm/v/@lrzdeveloper/percepta-ux.svg" alt="npm version"></a>
+  <a href="https://skills.sh/lrzdeveloper/percepta-ux/percepta-ux"><img src="https://skills.sh/b/lrzdeveloper/percepta-ux" alt="skills.sh installs"></a>
   <a href="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml"><img src="https://github.com/lrzdeveloper/percepta-ux/actions/workflows/validate.yml/badge.svg" alt="Validation CI"></a>
-  <a href="https://skills.sh/lrzdeveloper/percepta-ux"><img src="https://img.shields.io/badge/skills.sh-available-183127" alt="Available on skills.sh"></a>
 </p>
 
 <p align="center">
